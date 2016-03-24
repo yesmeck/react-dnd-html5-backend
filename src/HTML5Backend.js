@@ -484,6 +484,11 @@ export default class HTML5Backend {
 
   handleTopDrop(e) {
     const { dropTargetIds } = this;
+
+    if (!dropTargetIds) {
+      return;
+    }
+
     this.dropTargetIds = [];
 
     this.actions.hover(dropTargetIds, {
